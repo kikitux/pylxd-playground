@@ -87,8 +87,8 @@ server_cmd = [
     'bash /tmp/redis-server.sh'.split(),
     'curl -sLo /tmp/prometheus.sh https://raw.githubusercontent.com/kikitux/curl-bash/master/provision/prometheus.sh'.split(),
     'bash /tmp/prometheus.sh'.split(),
-    'curl -sLo /tmp/grafana.sh https://raw.githubusercontent.com/kikitux/curl-bash/master/provision/grafana.sh'.split(),
-    'bash /tmp/grafana.sh'.split(),
+    'curl -sLo /tmp/grafana-server.sh https://raw.githubusercontent.com/kikitux/curl-bash/master/provision/grafana-server.sh'.split(),
+    'bash /tmp/grafana-server.sh'.split(),
 ]
 
 client_cmd = [
