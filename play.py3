@@ -4,6 +4,15 @@ from pylxd import Client
 import time
 import warnings
 
+import platform
+
+# get alias
+if platform.machine() == "x86_64":
+  alias="bionic/amd64"
+else:
+  alias="bionic/arm64"
+
+
 # pylxd gives a warning on bionic for client.container.get('myc')
 warnings.filterwarnings("ignore")
 
@@ -16,7 +25,7 @@ def create_c(name):
                 'type': 'image', 'mode': 'pull',
                 'server': 'https://cloud-images.ubuntu.com/daily',
                 'protocol': 'simplestreams',
-                'alias': 'bionic/amd64'
+                'alias': alias
                 }
               }
     print("creating container", name)
