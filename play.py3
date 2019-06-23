@@ -83,9 +83,6 @@ all_list = server_list + client_list
 
 base_client_cmd = [
     'apt-get update'.split(),
-    'apt-get install --no-install-recommends -y docker.io'.split(),
-    'apt-get install --no-install-recommends -y default-jre'.split(),
-    'apt-get clean'.split(),
 ]
 
 server_cmd = [
