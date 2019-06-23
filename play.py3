@@ -9,9 +9,12 @@ import platform
 # get alias
 if platform.machine() == "x86_64":
   alias="bionic/amd64"
-else:
-  alias="bionic/arm64"
 
+if platform.machine() == "armv7l":
+  alias="bionic/armhf"
+
+if platform.machine() == "aarch64":
+  alias="bionic/arm64"
 
 # pylxd gives a warning on bionic for client.container.get('myc')
 warnings.filterwarnings("ignore")
